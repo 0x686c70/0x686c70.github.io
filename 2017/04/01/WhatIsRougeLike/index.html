@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="linoahg.me">
+  <title>到底什么是RougeLike游戏？ | ShirahaneMayuri&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="引言如果你是一位资深游戏玩家，那么最近你肯定在哪里看到过 RougeLike 这个词。RougeLike 这个古老的游戏类型现在又变得很潮流，其中各种要素都在不断的被新游戏借鉴。作为一名就是比你有更多空余时间的高玩，我想在这里介绍一下我了解的 RougeLike 相关的东西。文章很长，但应该会比较有意思。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="到底什么是RougeLike游戏？">
+<meta property="og:url" content="linoahg.me/2017/04/01/WhatIsRougeLike/index.html">
+<meta property="og:site_name" content="ShirahaneMayuri's Blog">
+<meta property="og:description" content="引言如果你是一位资深游戏玩家，那么最近你肯定在哪里看到过 RougeLike 这个词。RougeLike 这个古老的游戏类型现在又变得很潮流，其中各种要素都在不断的被新游戏借鉴。作为一名就是比你有更多空余时间的高玩，我想在这里介绍一下我了解的 RougeLike 相关的东西。文章很长，但应该会比较有意思。">
+<meta property="og:image" content="http://pre-sence.com/static/archives/rs_rogueunix.png">
+<meta property="og:updated_time" content="2017-04-01T11:56:24.476Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="到底什么是RougeLike游戏？">
+<meta name="twitter:description" content="引言如果你是一位资深游戏玩家，那么最近你肯定在哪里看到过 RougeLike 这个词。RougeLike 这个古老的游戏类型现在又变得很潮流，其中各种要素都在不断的被新游戏借鉴。作为一名就是比你有更多空余时间的高玩，我想在这里介绍一下我了解的 RougeLike 相关的东西。文章很长，但应该会比较有意思。">
+<meta name="twitter:image" content="http://pre-sence.com/static/archives/rs_rogueunix.png">
+  
+    <link rel="alternative" href="/atom.xml" title="ShirahaneMayuri&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/assets/favicon.ico">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.234bc0.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #2d2d2d"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/pmayuri.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">AnHlpProduct</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">ShirahaneMayuri&#39;s Blog</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/3466896994" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #2d2d2d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/pmayuri.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">AnHlpProduct</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>ShirahaneMayuri&#39;s Blog<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3466896994" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/categories/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-WhatIsRougeLike" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      到底什么是RougeLike游戏？
+    </h1>
+  
+
+        
+        <a href="/2017/04/01/WhatIsRougeLike/" class="archive-article-date">
+  	<time datetime="2017-04-01T10:18:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>如果你是一位资深游戏玩家，那么最近你肯定在哪里看到过 <strong><code>RougeLike</code></strong> 这个词。<strong><code>RougeLike</code></strong> 这个古老的游戏类型现在又变得很潮流，其中各种要素都在不断的被新游戏借鉴。作为一名就是比你有更多空余时间的高玩，我想在这里介绍一下我了解的 <strong><code>RougeLike</code></strong> 相关的东西。文章很长，但应该会比较有意思。</p>
+<a id="more"></a>
+<h1 id="不如从故事开始"><a href="#不如从故事开始" class="headerlink" title="不如从故事开始"></a>不如从故事开始</h1><p>任何一个 Dota 玩家都有类似”空血磕魔棒切假腿绕树林摇大五杀”这样津津乐道的故事。神奇的是 <strong><code>RougeLike</code></strong> 作为一个单机游戏类别，也有很多让人能够记住很久的故事。到这里我第一个想到的是一个已经记不清是何时在哪里看到的一个 <a href="http://www.bay12games.com/dwarves/" target="_blank" rel="external"><em>Dwarf Fortress</em></a> 里发生的故事：</p>
+<p>“有一次我的城堡里遭受了巨人的袭击。我派出我的所有部队守卫在城堡大门外。然而情况比我想象的要糟糕很多，在一段艰难的战斗后，部队伤亡已经非常惨重，而还有一个巨人始终没有被干掉。我想了想决定先把人都撤回来，后面再看看有什么办法。根据之前的经验我很明白现在这种城墙其实也是没办法挡住巨人的进攻，而且只要有一个巨人进来基本游戏就结束了，但眼前没有什么别的办法。我想说不定这就是我这次游戏的终点了。于是我下达了撤兵的命令，大部分矮人都在艰难的往城门移动。这时我发现有一个单位始终没有任何动作，我查看了一下她的状态，发现她是一名弓箭手，在性格一栏里写着’反叛’。我试着重新下达命令，但她还是没反应。眼看大部队已经撤入城门里，我开始关闭大门，心里想着不说是外面的这一个弓箭手，我的整个城堡估计也就是到今天为止了。我把状态切换到外面这个弓箭手身上，看看她到底准备做什么。她一直都站在那里没有动，而巨人很早就发现了她，正准备过去给她最后一击。接下来我看到的是，她走上了一个矮坡，转身，瞄准，射出一箭，箭矢穿过了巨人的头盔，正中头部，一击就把剩下的那个巨人干掉了。在战斗结束一切安稳后，我把她撤离了战斗部队，她在我的城堡里安详的度过了余生。当然我的城堡最后还是挂在了(某种 Dwarf Fortress 里很常见的入侵)上。”</p>
+<p>在你反应过来之前，这里还有一个 <a href="http://www.nethack.org/" target="_blank" rel="external"><em>NetHack</em></a> 里叫做 <a href="http://www.gamesetwatch.com/2011/03/column_play_excerpts_from_a_ro.php" target="_blank" rel="external"><em>DeathOnAStick</em></a> 的故事：</p>
+<blockquote>
+<p>“DeathOnAStick 在 NetHack 社区里出名是因为他在 nethack.alt.org 上从 2004-04-17 到 2005-11-27 间长达一年半的一局游戏。他把大部分的时间花在了用游戏内的变形魔法以很低的几率把石头变成宝石。他弄出来了超级多的宝石以至于他得想办法召来宠物巨兽来帮他搬这些宝石，因为它们实在是太多了。后面他达到了最底层获得了 ‘Amulet of Yendor’，返回了第一层。这时他只要随意找一个出口，就可以成功的结束这次游戏，很可能成为史上宝石最多的成功完成游戏的玩家。这时他看到了超级厉害的 ‘Wizard of Yendor’，杀死了他。为了庆祝即将到来的胜利他站在刚倒下的怪物尸体上，使用了’升级药水’。结果这药水是被诅咒的(在 NetHack 里面，使用了被诅咒的升级药水的效果是往上面’升一级’到达上面一层地图。游戏内的提示信息是’你升起来，穿过了屋顶。’)。当他到达’地面层’的时候，他做的第一件事就是检查他和他宠物巨兽的物品栏。跟想象的一样，里面一个宝石都没有。<br>这时，DeathOnAStick 原地待机了38秒。<br>他召来的宠物巨兽在他’升级’的时候要么就是被杀死了，要么就是在层面之间传送门处卡住了。反正最终，他游戏结束时的记录里只有两个宝石。好消息是，几年后他在一次 405 小时后的游戏里，于 2010-08-16 成功结束游戏，身上有8000个宝石。”</p>
+</blockquote>
+<p>最后一则是很久之前我在尝试写一篇关于 <a href="http://crawl.develz.org/wordpress/" target="_blank" rel="external">Dungeon Crawl Stone Soup</a> 的文章里，想用来做开头的故事。现在看来我当时应该是相当激动才能写出这么蛋疼的东西：</p>
+<blockquote>
+<p>“擦干了短剑上的血迹，Rusty，狗头人狂战士，捡起了发着银光的一块符文。这样，他就集齐了通往 Zot 领域的钥匙。传说在那里有一件神奇的物品，只要拿到它并带回地面上，就能满足你所有的愿望。然而能走到这里来，Rusty 已经算是很走运了。<br>时间往前倒转几分钟他，在走进这个房间时，这里还充满着可怕的怪物。幸运的是，没有人注意到了他 - 虽然地下城里没有白天夜晚的区别，就算是怪物也还是需要睡眠的。Rusty 静静的关上了门，在门边等待了一会。在确认没有怪物跟出来以后，他从背包里拿出了一张卷轴。Rusty 之前就使用过这种卷轴，它能将这一层中房间的布局准确的展现出来。他发现眼前的房间分为两层，一层就是他之前看到的，充满怪物的大房间；而后面一层则是窄窄的一条走道，其中一端是一层薄薄的墙壁。虽然 Rusty 唾弃肮脏的魔法，选择面对面与对手较量，但这地下城中一次次惊险的战斗使他深刻的体会到，要在这充满危险的地下城中生存下来光靠手里的武器绝对是不够的。在片刻的思考之后，他走到那扇墙壁前，从口袋里掏出一支魔棒，对准墙壁的方向轻轻挥了一下。魔棒尖端一阵闪光，墙壁上的砖整齐的落在地上，露出走道里一只还不知道发生了什么的兽人，以及远端地上闪光的符文。Rusty 握紧手中的短剑淡定的走上前去…”</p>
+</blockquote>
+<p>DCSS 以及大部分 <strong><code>RougeLike</code></strong> 游戏都有一个很棒的功能就是会给你每次游戏记下非常详细的 Morgue，包括你游戏结束时候的装备，在啥时候碰到了什么重要的怪物，什么时候拿到了什么道具，以及一下就能让你感慨良多的角色的死因。碰巧的是我发现 Rusty 的 Morgue 还在，这一下我非常清晰的想起来当时发生了什么。这是我第一个接近满级的角色。在往最危险的 Realm Of Zot 前进之前，我决定在 Elven Hall 这个可选的分支里再提升一下等级。这里都是等级比我低很多的高等精灵，我基本按住 Tab 快速战斗就可以了。我记得我几乎清空了一整个房间，剩下没多少血，长廊的远处还有一个。我想了想决定就过去干掉他再找地方恢复。于是我按住方向键往它那边快速前进。这时我发现我的血一路在迅速减少。我稍微有点慌，停了下来，发现剩下的那位是一个弓箭手，每次攻击伤害不高但是却出奇的准。这下我稍微有点慌了，又往反方向的跑。结果它的速度比我快，不但没跑开每几步还会被他射一箭。在最后的一个转角，我检查了一下我身上的东西。血瓶之前都用完了，只有一个传送卷轴。我想了想，深呼吸，使用了传送卷轴。最后的部分我这真想不起来了，不知道是因为 Elven Hall 最底层是传送无效还是我传送完了就落在了怪物身边，还是啥别的原因，反正就是挂了。我记得当时我在椅子上坐了一小会，站起来出去抽了一根烟，低声骂了一句操。</p>
+<p>除此之外我印象特别深刻的就是这个弓箭手的描述 - “高等精灵弓箭手：不像其他高等精灵，他放弃了剑术和魔法，把一生都花费在了磨练弓箭技术上”。</p>
+<p><strong>Rogue</strong>,  <strong>RougeLike</strong>, <strong>RougeLike-like</strong><br>哈！如果你能看到这里，那么你应该对 <strong><code>RougeLike</code></strong> 相当感兴趣了。接下来的篇幅里我会讲讲 <strong><code>RougeLike</code></strong> 这个名字的由来，其代表的定义和其他相关的东西。<br>Rogue – 一切的开始</p>
+<p>Glenn R. Wichman 在 <a href="www.wichman.org/roguehistory.html">A Brief History of “Rogue”</a> 中简单的讲述了 Rogue 的由来。很有意思的是 Rogue 的诞生和流行跟 Unix 的发展竟然有很大的关系。Rogue 最初版本诞生的时间是20世纪80年代，这正好是 Unix 系统发展的一个很重要的时期。你肯定知道 Linux，那么 Unix 可以简单的看做是 Linux 的爷爷。在那个时候家庭计算机还处于初期发展阶段，家用电脑最普遍的是传奇的 Apple II，而大学里学生都是通过只有键盘和输出设备的终端机来连接到服务器上，服务器上运行的操作系统就是早期的 Unix。1980 年前后 AT&amp;T 决定把 Unix Version 7 转做商业用途。UCB 的计算机研究人员开始着手开发 BSD Unix 来作为替代。</p>
+<p>前面提到了终端机，最早的终端机是原始到只有一个键盘和纸卷，系统的输出是一行一行的打印在纸上出来的。你可以想象当时的大部分程序就是只有不断往后输出结果的，你没有办法像现在这样用鼠标滚一下往上翻。在那个时候流行一个叫做 Adventure 的游戏，游戏的大概界面估计就像是这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">West of House</div><div class="line">You are standing in an open field west of a white house,</div><div class="line">with a boarded front door.</div><div class="line">There is a small mailbox here.</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>这一段其实是来自相同时代的著名游戏 <a href="https://en.wikipedia.org/wiki/Zork" target="_blank" rel="external">Zork</a> 里的。游戏通过文字描述你周围的环境，你通过输入 “向东走” 或者 “看着他” 这样的指令来进行互动。你可能想不到，这种游戏后来发展为了叫做 “Interactive Fiction” 的游戏类型，一段时间里也是主流商业游戏的宠儿。到现在几十年来不断有新作推出，每年都有世界范围的优作评选，有着非常忠实的玩家群体。</p>
+<p>很可能是后来数码的显示器终于被发明了，UCB 的一名学生 Ken Arnold 做了一件划时代的事情：他开发了一套软件库，可以避开输出文字的限制，在屏幕任意一个地方显示指定字符。这个库就是后来的 <code>curses</code>，现在在所有 Linux 发行版里都有内置。<code>curses</code> 随着 BSD Unix 一起在大学里逐渐普及开来。在另外一间大学里， Michael Toy 和 Glenn Wichman，两位忠实的 Adventure 玩家，看到 <code>curses</code> 的第一反应就是：我靠这个实在是太适合用来做游戏了。在这之后 Rogue 的最初版本就诞生了。</p>
+<p><img src="http://pre-sence.com/static/archives/rs_rogueunix.png" alt="Rogue on Unix, from Wikipedia"></p>
+<p>Rogue 是一个回合制的电脑 RPG 游戏。在 Rogue 里，你扮演一个在充满怪物和宝藏的地下城中的冒险者。游戏的目标是达到最底层，取得 “Amulet of Yendor”，再返回到第一层逃出生天。作者们一直觉得 Adventure 那一类的游戏往往关卡都是固定的，没有重玩的价值，于是它们就做了随机生成的地形和关卡。游戏内角色如果死掉了的话游戏就结束了，角色的等级和装备也都就没有了。游戏里有除了各种怪物，你还可以捡到武器和护甲，以及药水，法杖和卷轴。整个游戏的界面还是以简单的英文字符构成，你需要有点想象力才能感受到 <code>D</code> 是一头凶猛的龙。</p>
+<p>Rogue 的”推广”工作做的非常超前。一位开发人员把 Rogue 内置到了 BSD Unix V4.2 的操作系统中。之后在全球各地的大学花费重金购买的的计算机里，学生们在命令行里输入 <code>rogue</code> 就能有游戏玩。接下来的三年里，Rogue 成为了大学校园里最受欢迎的游戏。</p>
+<h2 id="来自过去的冲击"><a href="#来自过去的冲击" class="headerlink" title="来自过去的冲击"></a>来自过去的冲击</h2><p><a href="rogue.rogueforge.net">RougeLike Restoration Project</a> 维护着一系列可以在现代(指的就你电脑上的Win7)操作系统上运行的 Rogue。为了把这篇文章凑起来我找来 Rogue 5.4，也就是随 BSD 分发的那个版本试着玩了一下，仔细想想发现真的有很多有意思的地方。</p>
+<p>Rogue 最突出的一个设定就是永久死亡，其原因在这个原始的版本里表现的很明确：运行程序连菜单都没有直接让你站在地牢的第一层上。角色的名字就是你系统当前登陆的账号。死掉的了话会翻几屏显示一下玩家的状态，然后程序就退出了。远一点讲这其实是很符合 Unix 风格的一个程序，只有单一的功能，执行结束了就退出。既然死了就要重来，那很自然的就会需要设计让每次游戏流程能够有丰富变化的系统。Rogue 中的地形和道具系统很大程度上都反应了这个特点。</p>
+<p>首先 Rogue 中每一层的地图都是随机生成的。但是也许作者有些偷懒，地形方面可以说是非常简陋。每一层都是由大概 7-10 个四方形房间组成，之间用刚好玩家穿过的通道链接起来，所以说游戏里的地形跟 Rogue 的后续者们比起来算是相当单调的。普通的房间只要你踏进房间就能看清房间里所有的东西。为了有些变化有一部分房间是会被设定为黑暗的房间，你只看得到周围的8个格子。</p>
+<p>Rogue 有着很标准的物品系统，你可以装备武器，防具和指环，消耗品包括食物，药水，卷轴和法杖。关于物品 Rogue 有一个很突出的特色就是它的鉴定系统。如果你玩过 Diablo 那你肯定知道鉴定是什么意思。Rogue 里的鉴定可以说完全就是为了重复游戏性服务的。游戏内的所有东西都可以被鉴定。对于武器和装备，虽然不鉴定玩家也可以使用，但是你看不到物品的属性。可能发生的情况就是你捡到一个闪亮的大剑，捡起来就用然后发现完全砍不到人，最后发现它带有命中率 -10 的效果。游戏中还有被诅咒的装备的设定，虽然名字听起来很可怕但效果其实就是如果你不小心装备上了这种装备那么是无法正常的脱下来的。所以如果你发现你之前拿的 -10 的大剑是被诅咒的那就很头疼了。游戏中会出现的药水，卷轴和法杖的功能是固定的，但是每次重新开始游戏的时候他们名字会被随机打散。你一开始在游戏里拿到的药水是按颜色区别的，卷轴都会付给一个随机的名字。要确定一个物品的功能只有两种办法，一个是直接使用它，另一个是使用对应的鉴定卷轴或者其他特定的道具直接鉴别物品。让这个系统闪光的地方在于，游戏里的药水和卷轴有一部分是会有反面作用的。譬如药水里有毒药和致盲的，卷轴里也有让地图上怪物全部往你这走的危险的东西。法杖主要是对敌人使用，当然你也可以对着墙上用然后反弹回来作用到自己。游戏中的法杖效果也是正面反面都有。种种东西一起作用起来，你就算玩过千百盘对游戏里所有道具和物品都无比熟悉，每次在游戏里也不敢掉以轻心。</p>
+<p>地下城里最少不了的除了玩家当然怪物了。Rogue 中用 <strong><code>|</code></strong>, <strong><code>-</code></strong> 来勾画墙壁，<strong><code>#</code></strong> 代表通道，<strong><code>@</code></strong> 作为玩家，其他一组符号作为各种道具，剩下的所有字母都留给了怪物。Rogue 里怪物种类不算多，除了仅有数值差别的其他还有一些怪物有特殊的攻击效果。比如很字面上的，毒蛇会让你中毒，”Ice Monster”可以冻住你，吸血鬼可以偷取你的 HP 上限等等。Rogue 以及后续的绝大部分 <strong><code>RougeLike</code></strong> 严格遵守每个字符代表一个东西，所以蝙蝠和龙看起来都一样大，这个稍微有点遗憾。</p>
+<p>Rogue 是一个回合制的游戏，没有玩家操作的情况下游戏的世界是静止的。当你做出动作的时候就算进行了一回合，之后就轮到了怪物进行移动和攻击。游戏中战斗的方式就是邻接怪物的时候往怪物方向按移动键来”撞击”(Bump)。游戏内也有飞镖或者装备弓后射箭来进行远程攻击。除此之外你还可以投掷大部分道具来作为很业余的远程攻击。之前有提到，道具系统中有一个种类是食物，这个也就是所谓的”食物钟”(Food Clock)，它让这个看起来节奏很慢的游戏变的有些紧张。Rogue 中的 HP 恢复除了紧急时刻靠恢复药水，大部分时候都是通过原地休息，跳过当前回合来缓慢回血。每个回合都会消耗一些玩家的满腹度，如果满腹度低到一定程度就会进入虚弱的状态，玩家会时常饿晕，最后会被残酷的饿死。回复满腹度的方法显然就是吃东西了。但是食物在游戏中并不是那么容易找到，你需要关注身上的食物储备，在耗完之前找到下一个食物通常都是在地下城的更深处。Rogue 里食物的存在感很强，如果没东西吃的话你走两步就会晕一下，提示”你饿晕了”，还需要你额外按下空格确认。如果还是找不到东西的话你就得一直这样直到饿到挂，真的很残酷。</p>
+<p>除了上面讲到的这些很有设计感的要素，Rogue 也有一些做的很随意的地方。除了简陋的游戏界面，最让普通玩家头疼的估计就是操作了。玩 Rogue 需要按的键真的就是遍布了整个键盘。你可以使用 HJKLYUBN(高端程序员会很开心的认出这是 vi 键位), 方向键和他上面的邻居或者小键盘来进行八个方向的移动。然后其他的每个操作对应一个键。比如装备武器是小写的 <strong><code>w</code></strong>，装备护甲是大写的  <strong><code>W</code></strong>，喝药水是小写的  <strong><code>q</code></strong>，戴上戒指是大写的  <strong><code>P</code></strong>。Rogue 的手册里有很自豪的写到：”游戏中的操作都能通过一到两个按键来完成”。事实上在介绍 Unix 编程的名著 《TAOUP》 里有一节专门介绍了类似 Rogue 这种操作界面的程序，这种类型的界面在书里被称为 “<a href="http://www.faqs.org/docs/artu/ch11s06.html" target="_blank" rel="external">The Roguelike Pattern</a>“。这样的操作设定完全免去了菜单的使用，但估计很多人看到帮助里满屏的按键就感觉玩不动了。Rogue 中有着陷阱和秘道，需要通过搜索才能找到。偶尔会有玩家一下楼就进入到一个四周没门的房间，这时你只能贴着墙来回搜索来找到隐藏的门。这个虽然看起来很有探险的感觉但实际游戏里会让人感觉很蛋疼。你还可以给任何一件道具取自己定义的名字，有些情况会强制你给东西命名。比如你喝了一个没鉴定的药水，提示你”感觉很暖和”，但药水的真实功效还是没有体现出来，这时游戏就会问你你想怎么称呼这个药水。</p>
+<p>Rogue 本身的游戏内容不算太丰富，但却带来的一个简单却又完整而精妙的游戏模式。到这里你会想”我靠在这里面加入一个什么什么系统肯定非常棒”。显然 Rogue 火起来以后有很多人都是这么想的。Rogue 作为 Unix 文化下的产物其源代码是可以随意获取的，再加上很多玩家都是学计算机的蛋疼大学生。可以想象的，后面陆陆续续出来了很多在 Rogue 上进行加强的版本，也有另起炉灶按照 Rogue 的系统新写的游戏。这之后， Roguelike 的时代就到来了。</p>
+<h1 id="R-O-G-U-E-L-I-K-E"><a href="#R-O-G-U-E-L-I-K-E" class="headerlink" title="R O G U E L I K E"></a>R O G U E L I K E</h1><p>首先关于 Roguelike 最重要的一点就是它的名字，是”Roguelike”这九个字母连起来(R大写与否倒是无所谓)。所以像”Rougelike真是太棒了”和”我前天玩了一个 rogue(空格或者<code>-</code>)like”这种真很让人伤心。</p>
+<p>Roguelike 这个名字的来源我没有搜到相关的资料，但从这种称呼方式其实很符合很多高端大气上档次的软件项目的命名和描述习惯 - 明确的介绍软件的功能或来源。比如现在每个 Unix 环境里都有的 <code>yacc</code>，其中 <code>ya</code> 是 “Yet Another”，”只不过是另一个啥啥啥”的意思，用来表达(虚伪的)谦逊。现在逐渐流行起来的编程语言 Clojure 描述里介绍它是 Lisp 编程语言的一种衍生”方言”。</p>
+<p>那么什么样的游戏是 Roguelike 呢？在 2008 年国际 Roguelike 开发大会上，与会的专家提出了 “<a href="http://www.roguebasin.com/index.php?title=Berlin_Interpretation" target="_blank" rel="external">Berlin Interpretation</a>“ 作为这一游戏类型的准确定义。不过这个定义并没有看起来那么严肃，而这个国际会议好像就是 Roguelike 爱好者们的年度聚会。后面会提到 Roguelike 的开发者和玩家社区是非常有爱的一个群体。这里引用这个定义是因为我觉得它很精确地总结了一个 Roguelike 游戏应该有的特点。</p>
+<h2 id="Berlin-Interpretation"><a href="#Berlin-Interpretation" class="headerlink" title="Berlin Interpretation"></a>Berlin Interpretation</h2><p>上面提到的 “Berlin Interpretation” 中提到的特性分为三个等级，这里列出高等级的一组特性，如果一个游戏的系统满足这些特性的话那基本上就可以说它是一个 “Roguelike” 游戏了：</p>
+<ol>
+<li><p>随机生成的环境 游戏世界是以某种方式随机生成的，或者世界中的某些部分是随机生成的。这里可以包括地形，物品和怪物出现的位置等。随机生成物品和怪物如果有的话当然更好啦。随机生成的好处就是可以提高重复游戏性，所以显然的固定的谜题和剧情在这方面不是太管用。</p>
+</li>
+<li><p>永久死亡 一个游戏角色只有一条命。如果死掉的话这个角色就到此为止了，你只能以另一个角色的身份来重新开始游戏。对应的思路就是你必须为你的选择和失误付出代价，就像现实生活一样，哟。</p>
+</li>
+<li><p>回合制 与回合制相对的应该就是实时制了。回合制的游戏不应该对现实时间的流逝有反应，游戏中的世界是按照一回合一回合来运转的。这样再回合之间你可以有无限的时间进行思考。事实上，需要你停下来想上个一会儿的情况在优秀的 Roguelike 中是会经常出现的。</p>
+</li>
+<li><p>统一的游戏模式 (Non Modal) 这个也是从反面讲比较容易理解。像最终幻想那样在大地图上走，遇敌切换到战斗界面的游戏就是 “Modal” 的。Roguelike 要求所有操作都是在统一的一个界面上完成的，这个界面一般就是一个 2D 的地图。</p>
+</li>
+<li><p>复杂度 游戏允许以多种多样的方式来完成同一个目标。一个例子就是你不论选择近战或者远程还是法术路线，都可以玩的下去。</p>
+</li>
+<li><p>打怪练级，探索世界 每个人都喜欢这一套。我猜这里想表达的应该是游戏还是得有一个能够承载上面那些特性的主体内容。显然大部分情况下打怪练级，探索世界都是最管用的一套。</p>
+</li>
+</ol>
+<p>要特别提到的是一个 Roguelike 必须同时具有以上所有的特性。这就避免了”暗黑2是一个 Roguelike !” 这类的争论。同时，Rogue 也满足了这里的每一个条件。但是用规则什么的来介绍游戏实在是太没意思了，这里我想说说我对 Roguelike 游戏的感受。</p>
+<h2 id="荒岛问题"><a href="#荒岛问题" class="headerlink" title="荒岛问题"></a>荒岛问题</h2><p>有这样一个很常见的假想问题：”你要到一个荒岛上去度过余生，只允许你带一本书，你会带哪一本？”。对于这个问题的游戏版我现在已经有了答案：我要带上一个 Roguelike 游戏。这里不是说 Roguelike 是超越一切的终极无敌游戏类型，只是我觉得 Roguelike 太适合这种情况了。首先一个理由，荒岛上一般没有网络，所以肯定得选单机游戏吧。然后同一个游戏可能重复玩非常多次，这既是 Roguelike 能够发挥的地方了。挑一个现在主流的 Roguelike，你可能得花上一年多才能用一种职业或者路线勉强通关，之后又得花很久来一次完美通关。然后你可以依次尝试游戏里提供的其他大概二三十种路线，这样几年又混过去了。等你对游戏熟悉的不得了的时候，你又可以有新的目标了，比如随机职业连续10次通关，这样好几年又过去了。但最主要的还是， Roguelike 玩起来是真的真的很有趣啊。</p>
+<p>永久死亡常常被拿来看做 Roguelike 最重要的一个特点。任何一个 Roguelike 都会让你经常死，但是优秀的，或者说是公平的 Roguelike 会让你认识到死亡是你的错，是你由于缺乏经验，或者粗心大意，或者更常见的太过自信而做出了错误的选择才造成了这样悲剧的结果。大部分 Roguelike 在你挂的时候会显示出你的所有道具，技能和状态。冷静下来看看你大部分情况下都会找到一个能够让你避免这次死亡的方法，接着后悔不已。另外一方面，永久死亡会给你留下深刻的印象，帮助你积累经验来增加下次游戏成功的概率。像刚开始玩的时候刚走两步就挂了当然没什么感觉，当你稍微有点上手，打了一两个小时感觉进展不错的时候突然挂掉，那时感觉就不一样了。伴随着蛋疼的感受，你还会非常清醒的记住类似”就算还有一半血也不要去惹那个双头兽人”这样具体的教训。这带来的另外一个效果就是，你在下次游戏中，避开了之前的失误的时候会非常兴奋，有一种涨经验了的感受。对于一个有着永久死亡机制的游戏，回合制显然是最合理的选择。你不会希望你因为手抖了一下或者急着上厕所来就玩挂掉。而回合制的系统也给超复杂的游戏系统发挥的空间。像我之前讲到过的，在危机时刻你可以停下来权衡各种可能性，考虑仔细后再做行动。说像下棋一样可能太夸张了，但 Roguelike 绝对算是需要你动动脑子的游戏类型。</p>
+<p>如果你要重复玩同一个游戏，最糟糕的的情况就是就是游戏内容是完全重复的。所以像美少女文字冒险这类的游戏会通过添加剧情的分支来解决这个问题，一般像动作游戏和RPG会用不同的难度设定和多周目的隐藏内容来满足那些真的很喜欢这个游戏的玩家。Roguelike 在这方面有一个重要的优势 - 它的整个系统都是围绕”重玩价值”(Replay Value)来构思的。每次开始游戏，你面对的都是一个陌生的世界，你不会知道你固定的在哪里做什么就会获得一个牛逼道具，你需要积累经验，根据手上有的东西尽可能得走的更远。”随机生成”(Procedural Generation)是 Roguelike 重玩价值中非常重要的一个部分，在这里也需要仔细讲一下。通常来说游戏里真正是随机生成的往往只有地形，还有什么样的怪物出现在什么位置，一部分随机属性的道具。Roguelike 中显然也有固定的部分，这里通常包括技能的效果，怪物的特性和大部分可消耗品的的功能和一少部分特别出彩的装备(在 Roguelike 中通常被称为 Artifect)。正是这些固定的部分才能让你在前一次游戏中的经验能够迁移到下一次的游戏中，你也不希望上一次碰到兽人是拿斧头砍人的下一次碰到同样的一个兽人结果他变成了强力法师。随机生成的概念还包括一个容易被忽视的重要部分，就是在每次游戏的过程中，系统会从它所有可能提供的东西中抽出一个子集提供给玩家。举个简单的例子就是你在一次游戏中捡到了一把超级好用的斧头，你对它爱不释手。但是下一次开始游戏的时候，你不能确定这次游戏中能够再捡到这把斧头，他是否出现是由系统决定的。一方面这种情况会给人一种游戏”怎么也玩不完”的感觉，另一个更有意义的方面是阻止玩家总是用某种固定的模式来进行游戏，你必须学会利用手上能获得的资源来继续你的冒险。和残酷的现实生活一样，你不能选择你能拿到什么牌，只能想办法把牌打好。</p>
+<p>讲到这里正好又能跟文章最开始游戏中”故事”的部分关联上。Roguelike 的各种特性导致游戏很难用一个预先设计好的故事串起来。一方面是很难”自动生成”一个感人的故事，还一方面是永久死亡的话不太容易跟固定的故事结合。你打了一大半突然挂掉了又得重头看一遍剧情那再精彩的故事估计都没有用。但神奇的是 Roguelike 通过另一种方式实现了”故事”这个重要的元素。Roguelike 可以依靠游戏元素的暴力堆叠，在游戏中提供足够多的可能性，而这里面总有能够让你留下深刻印象的地方。最典型的例子就是角色的死亡，有时候你犯了一个很小的错误或者不经心的举动造成一系列连锁反应就会导致悲剧的发生。对应的也有时候在看似不可能的情况下你依靠精巧的策略和一点点运气成功逃出，这些都是会让玩家笑出声或者哭到泪流的场面。说实话这一点是我个人觉得 Roguelike 最神奇的一个地方，这些”故事”把 Roguelike 的所有特性贯穿了起来：足够多的游戏内容和随机生成的世界使得意外和有趣的场面发生，回合制的进行方式让你有足够的时间思考来以最精确的方式控制游戏，而永久死亡让你游戏中的成功和失败都变得更有意义。</p>
+<p>传统 Roguelike 游戏在界面和操作方式上仍然延续了 Rogue 的特性，即字符组成的界面和使用很多的按键来进行操作。Rogue 这种简陋的表达方式事实上有一个很微妙的副作用 - 你可以几乎无限制的往游戏里添加功能，而不需要担心像美术资源这样的问题。比如开发者想加入一种有八个头的怪物，玩家要把每个头都砍掉才能杀死他。在 Roguelike 的情况里他不需要真的画出栩栩如生的八个头，还出每个头被砍掉的效果，只要做好相关的功能，在游戏中用一个 H 来代表这个怪物就可以了。一个很有趣的情况是很多 Roguelike 的早期开发都是一个人完成的，这种简洁的表现方式使得开发不会受到各种外部因素的限制，作者可以随意构造他设想的游戏世界。正是这种无约束的开发思路才使得 Roguelike 游戏能够拥有庞大的游戏要素 - 海量的怪物种类，法术技能，装备和地形以及各种各样有特色的系统。而复杂的操作方式也是对应复杂的游戏系统最直接的解决方案。你要频繁使用大概十来个操作，显然每个按键对应一个操作比起每次打开菜单再按上下键来选功能方便很多吧。另外值得一提的是很多现代的 Roguelike 都在尝试提供简单的带真正图像的版本来吸引更多玩家，有些游戏也在实验设计基于鼠标的操作方式。</p>
+<p>到这里为止的介绍基本上都是脱离于哪个具体的 Roguelike 游戏来说的。接下来终于到了有意思的时刻了，我会介绍下我觉得很有特点的 Roguelike 游戏，顺序是按照我对游戏的熟悉程度。对了我还没有说过，这里介绍的所有 Roguelike 游戏(除了一个明显的以外)都是可以免费获取的，就是这么棒。事实上 Roguelike 一直以来都是游离在商业游戏之外的一种游戏类型，我想你看到这里应该也能理解是为什么。</p>
+<h2 id="坏的，和丑的"><a href="#坏的，和丑的" class="headerlink" title="坏的，和丑的"></a>坏的，和丑的</h2><p>这么长的篇幅都是在说 Roguelike 的好话，但事实上现在我已经很少在真的玩 Roguelike 游戏了。而且根据在网上偶尔看到的抱怨，很多玩家也只是一直关心这个类型的发展，仅仅是在关注的游戏出新版本的时候才下下来玩一下。</p>
+<p>就已 DCSS(<a href="http://crawl.develz.org/wordpress/" target="_blank" rel="external">Dungeon Crawl Stone Soup</a>)为例，就我个人而言，最主要的原因我觉得是传统 Roguelike 一局的时间太长了。DCSS 就我这种水平的话随便开一局可以打二十分钟以上，如果顺利的话两三个小时没得跑了。但我现在基本都打不穿，所以大概到那个时候就因为某些蛋疼的原因死掉，然后什么都没有了。为什么网游这么多人玩，很大一部分原因就是你投入了时间后他会让你获得一些看起来很永久的东西，虽然你说不定过几个月又不玩了但是这个收获的感觉绝对就是网游比单机游戏粘人的一个巨大优势。</p>
+<p>另一方面，系统的复杂程度也让人很蛋疼。在 DCSS 里我仍然没有成功用法师系的角色熬过 10 级。法师玩起来的感觉跟近战职业真的是天差地别，很多原来你看都不看一眼就上去砍的敌人，用法师你见面就要回头跑，跑慢一点就当场跪下这样。这个在游戏性上的确是好极了，但是对我来说我这又要花费几十个小时才能再次上手，这对我现在这种每天吃饭都是麦当劳的超快节奏人生来说实在是太痛苦了。我一直在想我要是小时候能玩到这些游戏就好了，而事实上像绝大部分 NetHack 玩家都是年龄比较大的，他们在闲的飞起的年纪花了无数的时间熟悉了这个游戏，接下来只要看看新版本的更新内容又能迅速上手。</p>
+<p>这可能也是为什么 Roguelike-like 现在如此火爆的原因。Roguelike 的设计思路实在是太完美，特别是对于现在移动游戏短平快，重复度高的特点，任意找些 Roguelike 的东西加进来都非常管用。所以我觉得接下来会看到各种各样的新游戏在 Roguelike 里找灵感，并且大获成功。所以当下了解一下 Roguelike 对于一位高玩来说的确很有必要。</p>
+<h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><p>这最后一部分会介绍一些 Roguelike 社区的相关信息，以及一些写的很好的讲 Roguelike 的文章，如果你对 Roguelike 这个游戏类型感兴趣的话，你可以继续在这些地方进行深度的了解。</p>
+<ul>
+<li><p><a href="http://www.rockpapershotgun.com/2011/12/15/potions-and-pitfalls-my-year-in-roguelikes/" target="_blank" rel="external">Potions And Pitfalls: My Year In Roguelikes</a><br>我最开始接触 Roguelike 的时候看到的一篇文章，当时正好是 Dungeons of Dredmor 发售前后，我当时就是按着这篇一个个游戏玩下来慢慢入了 Roguelike 这个坑。</p>
+</li>
+<li><p><a href="http://www.rockpapershotgun.com/2009/01/14/zangbandtk-confessions-of-a-dungeon-hack/" target="_blank" rel="external">ZangbandTK: Confessions of a Dungeon Hack</a><br>跟上面一篇一样也是 Rock, Paper, Shotgun 上的一篇文章。讲的是一个现在都很难下到的 ZangbandTK，但是文章写的太好让人看完马上就想去找游戏来玩。</p>
+</li>
+<li><p><a href="http://www.gamesetwatch.com/column_at_play/" target="_blank" rel="external">@Play</a><br>GameSetWatch 上的一个关于 Roguelike 的专栏，作者对它讲的东西那是相当懂，有很多游戏的超深度分析，也有很多可以轻松阅读的小品。遗憾的是现在已经停止更新了，但文章很多够看一阵了。</p>
+</li>
+<li><p><a href="http://www.roguelikeradio.com/" target="_blank" rel="external">Roguelike Radio</a><br>可能是唯一一个关于 Roguelike 的 Podcast。但是质量实在是高的飞起。这里有几乎所有著名 Roguelike 游戏作者的采访。我记得有一期采访了一些在大学里研究游戏的博士和教授谈了谈他们工作的内容，感觉非常有意思。</p>
+</li>
+<li><p><a href="http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page" target="_blank" rel="external">RogueBasin</a><br>虽然看上去是一个 Roguelike 开发技术的维基，但其实这边可能是最全的 Roguelike 游戏数据库，绝大部分的游戏这边都有页面简单介绍。如果你对开发也感兴趣的话这边有很好的教程</p>
+</li>
+<li><p><a href="http://www.reddit.com/r/roguelikes" target="_blank" rel="external">reddit.com/r/roguelikes</a><br>Reddit 上一个流量不大的 Roguelike 社区，感觉非常和谐友爱。大部分内容就是新的 Roguelike 相关游戏，第一次胜利的报告，还有 DCSS 和 Brogue 的每周挑战。</p>
+</li>
+</ul>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>这篇超长的文章到这里就结束了。正如最开始提到的，越来越多新开发的游戏在从 Roguelike 里借鉴各种元素，以后 Roguelike 这个词毫无疑问的也会更多的出现。希望能看到这里的你能对 Roguelike 相关的东西有一个比较准确的理解。其实文中有些阐述比较武断，但你知道的游戏的东西太严肃了也没什么意思，其实还是如果能找个 Roguelike 游戏来玩一下，感受一下这个神奇的游戏类型最重要了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">发展史</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">游戏类型</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/随笔/" class="article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:linoahg.me/2017/04/01/WhatIsRougeLike/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/01/WhenTheKeyDown/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">当你使用google搜索，按下Enter键后，发生了什么</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2129462"></script>
+<!-- UY END -->
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 AnHlpProduct
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a> Here is A Silence room <a href="#" target="_blank">by ShirahaneMayuri</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.234bc0.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">发展史</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">游戏类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">底层</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">一个弱智&lt;br&gt;&lt;br&gt;写点东西&lt;br&gt;玩点游戏</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
