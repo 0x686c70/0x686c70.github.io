@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="ShirahaneMayuri's Blog">
 <meta property="og:description" content="引言如果你是一位资深游戏玩家，那么最近你肯定在哪里看到过 RougeLike 这个词。RougeLike 这个古老的游戏类型现在又变得很潮流，其中各种要素都在不断的被新游戏借鉴。作为一名就是比你有更多空余时间的高玩，我想在这里介绍一下我了解的 RougeLike 相关的东西。文章很长，但应该会比较有意思。">
 <meta property="og:image" content="http://pre-sence.com/static/archives/rs_rogueunix.png">
-<meta property="og:updated_time" content="2017-04-01T12:27:23.987Z">
+<meta property="og:updated_time" content="2017-04-01T12:29:29.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="到底什么是RougeLike游戏？">
 <meta name="twitter:description" content="引言如果你是一位资深游戏玩家，那么最近你肯定在哪里看到过 RougeLike 这个词。RougeLike 这个古老的游戏类型现在又变得很潮流，其中各种要素都在不断的被新游戏借鉴。作为一名就是比你有更多空余时间的高玩，我想在这里介绍一下我了解的 RougeLike 相关的东西。文章很长，但应该会比较有意思。">
@@ -198,17 +198,17 @@
 <p><img src="http://pre-sence.com/static/archives/rs_rogueunix.png" alt="Rogue on Unix, from Wikipedia"></p>
 <p>Rogue 是一个回合制的电脑 RPG 游戏。在 Rogue 里，你扮演一个在充满怪物和宝藏的地下城中的冒险者。游戏的目标是达到最底层，取得 “Amulet of Yendor”，再返回到第一层逃出生天。作者们一直觉得 Adventure 那一类的游戏往往关卡都是固定的，没有重玩的价值，于是它们就做了随机生成的地形和关卡。游戏内角色如果死掉了的话游戏就结束了，角色的等级和装备也都就没有了。游戏里有除了各种怪物，你还可以捡到武器和护甲，以及药水，法杖和卷轴。整个游戏的界面还是以简单的英文字符构成，你需要有点想象力才能感受到 <code>D</code> 是一头凶猛的龙。</p>
 <p>Rogue 的”推广”工作做的非常超前。一位开发人员把 Rogue 内置到了 BSD Unix V4.2 的操作系统中。之后在全球各地的大学花费重金购买的的计算机里，学生们在命令行里输入 <code>rogue</code> 就能有游戏玩。接下来的三年里，Rogue 成为了大学校园里最受欢迎的游戏。</p>
-<h2 id="来自过去的冲击"><a href="#来自过去的冲击" class="headerlink" title="来自过去的冲击"></a>来自过去的冲击</h2><p><a href="http://rogue.rogueforge.net \" target="_blank" rel="external">RougeLike Restoration Project</a> 维护着一系列可以在现代(指的就你电脑上的Win7)操作系统上运行的 Rogue。为了把这篇文章凑起来我找来 Rogue 5.4，也就是随 BSD 分发的那个版本试着玩了一下，仔细想想发现真的有很多有意思的地方。</p>
+<h2 id="来自过去的冲击"><a href="#来自过去的冲击" class="headerlink" title="来自过去的冲击"></a>来自过去的冲击</h2><p><a href="http://rogue.rogueforge.net" target="_blank" rel="external">RougeLike Restoration Project</a> 维护着一系列可以在现代(指的就你电脑上的Win7)操作系统上运行的 Rogue。为了把这篇文章凑起来我找来 Rogue 5.4，也就是随 BSD 分发的那个版本试着玩了一下，仔细想想发现真的有很多有意思的地方。</p>
 <p>Rogue 最突出的一个设定就是永久死亡，其原因在这个原始的版本里表现的很明确：运行程序连菜单都没有直接让你站在地牢的第一层上。角色的名字就是你系统当前登陆的账号。死掉的了话会翻几屏显示一下玩家的状态，然后程序就退出了。远一点讲这其实是很符合 Unix 风格的一个程序，只有单一的功能，执行结束了就退出。既然死了就要重来，那很自然的就会需要设计让每次游戏流程能够有丰富变化的系统。Rogue 中的地形和道具系统很大程度上都反应了这个特点。</p>
 <p>首先 Rogue 中每一层的地图都是随机生成的。但是也许作者有些偷懒，地形方面可以说是非常简陋。每一层都是由大概 7-10 个四方形房间组成，之间用刚好玩家穿过的通道链接起来，所以说游戏里的地形跟 Rogue 的后续者们比起来算是相当单调的。普通的房间只要你踏进房间就能看清房间里所有的东西。为了有些变化有一部分房间是会被设定为黑暗的房间，你只看得到周围的8个格子。</p>
 <p>Rogue 有着很标准的物品系统，你可以装备武器，防具和指环，消耗品包括食物，药水，卷轴和法杖。关于物品 Rogue 有一个很突出的特色就是它的鉴定系统。如果你玩过 Diablo 那你肯定知道鉴定是什么意思。Rogue 里的鉴定可以说完全就是为了重复游戏性服务的。游戏内的所有东西都可以被鉴定。对于武器和装备，虽然不鉴定玩家也可以使用，但是你看不到物品的属性。可能发生的情况就是你捡到一个闪亮的大剑，捡起来就用然后发现完全砍不到人，最后发现它带有命中率 -10 的效果。游戏中还有被诅咒的装备的设定，虽然名字听起来很可怕但效果其实就是如果你不小心装备上了这种装备那么是无法正常的脱下来的。所以如果你发现你之前拿的 -10 的大剑是被诅咒的那就很头疼了。游戏中会出现的药水，卷轴和法杖的功能是固定的，但是每次重新开始游戏的时候他们名字会被随机打散。你一开始在游戏里拿到的药水是按颜色区别的，卷轴都会付给一个随机的名字。要确定一个物品的功能只有两种办法，一个是直接使用它，另一个是使用对应的鉴定卷轴或者其他特定的道具直接鉴别物品。让这个系统闪光的地方在于，游戏里的药水和卷轴有一部分是会有反面作用的。譬如药水里有毒药和致盲的，卷轴里也有让地图上怪物全部往你这走的危险的东西。法杖主要是对敌人使用，当然你也可以对着墙上用然后反弹回来作用到自己。游戏中的法杖效果也是正面反面都有。种种东西一起作用起来，你就算玩过千百盘对游戏里所有道具和物品都无比熟悉，每次在游戏里也不敢掉以轻心。</p>
 <p>地下城里最少不了的除了玩家当然怪物了。Rogue 中用 <strong><code>|</code></strong>, <strong><code>-</code></strong> 来勾画墙壁，<strong><code>#</code></strong> 代表通道，<strong><code>@</code></strong> 作为玩家，其他一组符号作为各种道具，剩下的所有字母都留给了怪物。Rogue 里怪物种类不算多，除了仅有数值差别的其他还有一些怪物有特殊的攻击效果。比如很字面上的，毒蛇会让你中毒，”Ice Monster”可以冻住你，吸血鬼可以偷取你的 HP 上限等等。Rogue 以及后续的绝大部分 <strong><code>RougeLike</code></strong> 严格遵守每个字符代表一个东西，所以蝙蝠和龙看起来都一样大，这个稍微有点遗憾。</p>
 <p>Rogue 是一个回合制的游戏，没有玩家操作的情况下游戏的世界是静止的。当你做出动作的时候就算进行了一回合，之后就轮到了怪物进行移动和攻击。游戏中战斗的方式就是邻接怪物的时候往怪物方向按移动键来”撞击”(Bump)。游戏内也有飞镖或者装备弓后射箭来进行远程攻击。除此之外你还可以投掷大部分道具来作为很业余的远程攻击。之前有提到，道具系统中有一个种类是食物，这个也就是所谓的”食物钟”(Food Clock)，它让这个看起来节奏很慢的游戏变的有些紧张。Rogue 中的 HP 恢复除了紧急时刻靠恢复药水，大部分时候都是通过原地休息，跳过当前回合来缓慢回血。每个回合都会消耗一些玩家的满腹度，如果满腹度低到一定程度就会进入虚弱的状态，玩家会时常饿晕，最后会被残酷的饿死。回复满腹度的方法显然就是吃东西了。但是食物在游戏中并不是那么容易找到，你需要关注身上的食物储备，在耗完之前找到下一个食物通常都是在地下城的更深处。Rogue 里食物的存在感很强，如果没东西吃的话你走两步就会晕一下，提示”你饿晕了”，还需要你额外按下空格确认。如果还是找不到东西的话你就得一直这样直到饿到挂，真的很残酷。</p>
-<p>除了上面讲到的这些很有设计感的要素，Rogue 也有一些做的很随意的地方。除了简陋的游戏界面，最让普通玩家头疼的估计就是操作了。玩 Rogue 需要按的键真的就是遍布了整个键盘。你可以使用 HJKLYUBN(高端程序员会很开心的认出这是 vi 键位), 方向键和他上面的邻居或者小键盘来进行八个方向的移动。然后其他的每个操作对应一个键。比如装备武器是小写的 <strong><code>w</code></strong>，装备护甲是大写的  <strong><code>W</code></strong>，喝药水是小写的  <strong><code>q</code></strong>，戴上戒指是大写的  <strong><code>P</code></strong>。Rogue 的手册里有很自豪的写到：”游戏中的操作都能通过一到两个按键来完成”。事实上在介绍 Unix 编程的名著 《TAOUP》 里有一节专门介绍了类似 Rogue 这种操作界面的程序，这种类型的界面在书里被称为 “<a href="http://www.faqs.org/docs/artu/ch11s06.html \" target="_blank" rel="external">The Roguelike Pattern</a>“。这样的操作设定完全免去了菜单的使用，但估计很多人看到帮助里满屏的按键就感觉玩不动了。Rogue 中有着陷阱和秘道，需要通过搜索才能找到。偶尔会有玩家一下楼就进入到一个四周没门的房间，这时你只能贴着墙来回搜索来找到隐藏的门。这个虽然看起来很有探险的感觉但实际游戏里会让人感觉很蛋疼。你还可以给任何一件道具取自己定义的名字，有些情况会强制你给东西命名。比如你喝了一个没鉴定的药水，提示你”感觉很暖和”，但药水的真实功效还是没有体现出来，这时游戏就会问你你想怎么称呼这个药水。</p>
+<p>除了上面讲到的这些很有设计感的要素，Rogue 也有一些做的很随意的地方。除了简陋的游戏界面，最让普通玩家头疼的估计就是操作了。玩 Rogue 需要按的键真的就是遍布了整个键盘。你可以使用 HJKLYUBN(高端程序员会很开心的认出这是 vi 键位), 方向键和他上面的邻居或者小键盘来进行八个方向的移动。然后其他的每个操作对应一个键。比如装备武器是小写的 <strong><code>w</code></strong>，装备护甲是大写的  <strong><code>W</code></strong>，喝药水是小写的  <strong><code>q</code></strong>，戴上戒指是大写的  <strong><code>P</code></strong>。Rogue 的手册里有很自豪的写到：”游戏中的操作都能通过一到两个按键来完成”。事实上在介绍 Unix 编程的名著 《TAOUP》 里有一节专门介绍了类似 Rogue 这种操作界面的程序，这种类型的界面在书里被称为 “<a href="http://www.faqs.org/docs/artu/ch11s06.html" target="_blank" rel="external">The Roguelike Pattern</a>“。这样的操作设定完全免去了菜单的使用，但估计很多人看到帮助里满屏的按键就感觉玩不动了。Rogue 中有着陷阱和秘道，需要通过搜索才能找到。偶尔会有玩家一下楼就进入到一个四周没门的房间，这时你只能贴着墙来回搜索来找到隐藏的门。这个虽然看起来很有探险的感觉但实际游戏里会让人感觉很蛋疼。你还可以给任何一件道具取自己定义的名字，有些情况会强制你给东西命名。比如你喝了一个没鉴定的药水，提示你”感觉很暖和”，但药水的真实功效还是没有体现出来，这时游戏就会问你你想怎么称呼这个药水。</p>
 <p>Rogue 本身的游戏内容不算太丰富，但却带来的一个简单却又完整而精妙的游戏模式。到这里你会想”我靠在这里面加入一个什么什么系统肯定非常棒”。显然 Rogue 火起来以后有很多人都是这么想的。Rogue 作为 Unix 文化下的产物其源代码是可以随意获取的，再加上很多玩家都是学计算机的蛋疼大学生。可以想象的，后面陆陆续续出来了很多在 Rogue 上进行加强的版本，也有另起炉灶按照 Rogue 的系统新写的游戏。这之后， Roguelike 的时代就到来了。</p>
 <h1 id="R-O-G-U-E-L-I-K-E"><a href="#R-O-G-U-E-L-I-K-E" class="headerlink" title="R O G U E L I K E"></a>R O G U E L I K E</h1><p>首先关于 Roguelike 最重要的一点就是它的名字，是”Roguelike”这九个字母连起来(R大写与否倒是无所谓)。所以像”Rougelike真是太棒了”和”我前天玩了一个 rogue(空格或者<code>-</code>)like”这种真很让人伤心。</p>
 <p>Roguelike 这个名字的来源我没有搜到相关的资料，但从这种称呼方式其实很符合很多高端大气上档次的软件项目的命名和描述习惯 - 明确的介绍软件的功能或来源。比如现在每个 Unix 环境里都有的 <code>yacc</code>，其中 <code>ya</code> 是 “Yet Another”，”只不过是另一个啥啥啥”的意思，用来表达(虚伪的)谦逊。现在逐渐流行起来的编程语言 Clojure 描述里介绍它是 Lisp 编程语言的一种衍生”方言”。</p>
-<p>那么什么样的游戏是 Roguelike 呢？在 2008 年国际 Roguelike 开发大会上，与会的专家提出了 “<a href="http://www.roguebasin.com/index.php?title=Berlin_Interpretation \" target="_blank" rel="external">Berlin Interpretation</a>“ 作为这一游戏类型的准确定义。不过这个定义并没有看起来那么严肃，而这个国际会议好像就是 Roguelike 爱好者们的年度聚会。后面会提到 Roguelike 的开发者和玩家社区是非常有爱的一个群体。这里引用这个定义是因为我觉得它很精确地总结了一个 Roguelike 游戏应该有的特点。</p>
+<p>那么什么样的游戏是 Roguelike 呢？在 2008 年国际 Roguelike 开发大会上，与会的专家提出了 “<a href="http://www.roguebasin.com/index.php?title=Berlin_Interpretation" target="_blank" rel="external">Berlin Interpretation</a>“ 作为这一游戏类型的准确定义。不过这个定义并没有看起来那么严肃，而这个国际会议好像就是 Roguelike 爱好者们的年度聚会。后面会提到 Roguelike 的开发者和玩家社区是非常有爱的一个群体。这里引用这个定义是因为我觉得它很精确地总结了一个 Roguelike 游戏应该有的特点。</p>
 <h2 id="Berlin-Interpretation"><a href="#Berlin-Interpretation" class="headerlink" title="Berlin Interpretation"></a>Berlin Interpretation</h2><p>上面提到的 “Berlin Interpretation” 中提到的特性分为三个等级，这里列出高等级的一组特性，如果一个游戏的系统满足这些特性的话那基本上就可以说它是一个 “Roguelike” 游戏了：</p>
 <ol>
 <li><p>随机生成的环境 游戏世界是以某种方式随机生成的，或者世界中的某些部分是随机生成的。这里可以包括地形，物品和怪物出现的位置等。随机生成物品和怪物如果有的话当然更好啦。随机生成的好处就是可以提高重复游戏性，所以显然的固定的谜题和剧情在这方面不是太管用。</p>
@@ -232,22 +232,22 @@
 <p>传统 Roguelike 游戏在界面和操作方式上仍然延续了 Rogue 的特性，即字符组成的界面和使用很多的按键来进行操作。Rogue 这种简陋的表达方式事实上有一个很微妙的副作用 - 你可以几乎无限制的往游戏里添加功能，而不需要担心像美术资源这样的问题。比如开发者想加入一种有八个头的怪物，玩家要把每个头都砍掉才能杀死他。在 Roguelike 的情况里他不需要真的画出栩栩如生的八个头，还出每个头被砍掉的效果，只要做好相关的功能，在游戏中用一个 H 来代表这个怪物就可以了。一个很有趣的情况是很多 Roguelike 的早期开发都是一个人完成的，这种简洁的表现方式使得开发不会受到各种外部因素的限制，作者可以随意构造他设想的游戏世界。正是这种无约束的开发思路才使得 Roguelike 游戏能够拥有庞大的游戏要素 - 海量的怪物种类，法术技能，装备和地形以及各种各样有特色的系统。而复杂的操作方式也是对应复杂的游戏系统最直接的解决方案。你要频繁使用大概十来个操作，显然每个按键对应一个操作比起每次打开菜单再按上下键来选功能方便很多吧。另外值得一提的是很多现代的 Roguelike 都在尝试提供简单的带真正图像的版本来吸引更多玩家，有些游戏也在实验设计基于鼠标的操作方式。</p>
 <p>到这里为止的介绍基本上都是脱离于哪个具体的 Roguelike 游戏来说的。接下来终于到了有意思的时刻了，我会介绍下我觉得很有特点的 Roguelike 游戏，顺序是按照我对游戏的熟悉程度。对了我还没有说过，这里介绍的所有 Roguelike 游戏(除了一个明显的以外)都是可以免费获取的，就是这么棒。事实上 Roguelike 一直以来都是游离在商业游戏之外的一种游戏类型，我想你看到这里应该也能理解是为什么。</p>
 <h2 id="坏的，和丑的"><a href="#坏的，和丑的" class="headerlink" title="坏的，和丑的"></a>坏的，和丑的</h2><p>这么长的篇幅都是在说 Roguelike 的好话，但事实上现在我已经很少在真的玩 Roguelike 游戏了。而且根据在网上偶尔看到的抱怨，很多玩家也只是一直关心这个类型的发展，仅仅是在关注的游戏出新版本的时候才下下来玩一下。</p>
-<p>就已 DCSS(<a href="http://crawl.develz.org/wordpress/ \" target="_blank" rel="external">Dungeon Crawl Stone Soup</a>)为例，就我个人而言，最主要的原因我觉得是传统 Roguelike 一局的时间太长了。DCSS 就我这种水平的话随便开一局可以打二十分钟以上，如果顺利的话两三个小时没得跑了。但我现在基本都打不穿，所以大概到那个时候就因为某些蛋疼的原因死掉，然后什么都没有了。为什么网游这么多人玩，很大一部分原因就是你投入了时间后他会让你获得一些看起来很永久的东西，虽然你说不定过几个月又不玩了但是这个收获的感觉绝对就是网游比单机游戏粘人的一个巨大优势。</p>
+<p>就已 DCSS(<a href="http://crawl.develz.org/wordpress/" target="_blank" rel="external">Dungeon Crawl Stone Soup</a>)为例，就我个人而言，最主要的原因我觉得是传统 Roguelike 一局的时间太长了。DCSS 就我这种水平的话随便开一局可以打二十分钟以上，如果顺利的话两三个小时没得跑了。但我现在基本都打不穿，所以大概到那个时候就因为某些蛋疼的原因死掉，然后什么都没有了。为什么网游这么多人玩，很大一部分原因就是你投入了时间后他会让你获得一些看起来很永久的东西，虽然你说不定过几个月又不玩了但是这个收获的感觉绝对就是网游比单机游戏粘人的一个巨大优势。</p>
 <p>另一方面，系统的复杂程度也让人很蛋疼。在 DCSS 里我仍然没有成功用法师系的角色熬过 10 级。法师玩起来的感觉跟近战职业真的是天差地别，很多原来你看都不看一眼就上去砍的敌人，用法师你见面就要回头跑，跑慢一点就当场跪下这样。这个在游戏性上的确是好极了，但是对我来说我这又要花费几十个小时才能再次上手，这对我现在这种每天吃饭都是麦当劳的超快节奏人生来说实在是太痛苦了。我一直在想我要是小时候能玩到这些游戏就好了，而事实上像绝大部分 NetHack 玩家都是年龄比较大的，他们在闲的飞起的年纪花了无数的时间熟悉了这个游戏，接下来只要看看新版本的更新内容又能迅速上手。</p>
 <p>这可能也是为什么 Roguelike-like 现在如此火爆的原因。Roguelike 的设计思路实在是太完美，特别是对于现在移动游戏短平快，重复度高的特点，任意找些 Roguelike 的东西加进来都非常管用。所以我觉得接下来会看到各种各样的新游戏在 Roguelike 里找灵感，并且大获成功。所以当下了解一下 Roguelike 对于一位高玩来说的确很有必要。</p>
 <h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><p>这最后一部分会介绍一些 Roguelike 社区的相关信息，以及一些写的很好的讲 Roguelike 的文章，如果你对 Roguelike 这个游戏类型感兴趣的话，你可以继续在这些地方进行深度的了解。</p>
 <ul>
-<li><p><a href="http://www.rockpapershotgun.com/2011/12/15/potions-and-pitfalls-my-year-in-roguelikes/ \" target="_blank" rel="external">Potions And Pitfalls: My Year In Roguelikes</a><br>我最开始接触 Roguelike 的时候看到的一篇文章，当时正好是 Dungeons of Dredmor 发售前后，我当时就是按着这篇一个个游戏玩下来慢慢入了 Roguelike 这个坑。</p>
+<li><p><a href="http://www.rockpapershotgun.com/2011/12/15/potions-and-pitfalls-my-year-in-roguelikes/" target="_blank" rel="external">Potions And Pitfalls: My Year In Roguelikes</a><br>我最开始接触 Roguelike 的时候看到的一篇文章，当时正好是 Dungeons of Dredmor 发售前后，我当时就是按着这篇一个个游戏玩下来慢慢入了 Roguelike 这个坑。</p>
 </li>
-<li><p><a href="http://www.rockpapershotgun.com/2009/01/14/zangbandtk-confessions-of-a-dungeon-hack/ \" target="_blank" rel="external">ZangbandTK: Confessions of a Dungeon Hack</a><br>跟上面一篇一样也是 Rock, Paper, Shotgun 上的一篇文章。讲的是一个现在都很难下到的 ZangbandTK，但是文章写的太好让人看完马上就想去找游戏来玩。</p>
+<li><p><a href="http://www.rockpapershotgun.com/2009/01/14/zangbandtk-confessions-of-a-dungeon-hack/" target="_blank" rel="external">ZangbandTK: Confessions of a Dungeon Hack</a><br>跟上面一篇一样也是 Rock, Paper, Shotgun 上的一篇文章。讲的是一个现在都很难下到的 ZangbandTK，但是文章写的太好让人看完马上就想去找游戏来玩。</p>
 </li>
-<li><p><a href="http://www.gamesetwatch.com/column_at_play/ \" target="_blank" rel="external">@Play</a><br>GameSetWatch 上的一个关于 Roguelike 的专栏，作者对它讲的东西那是相当懂，有很多游戏的超深度分析，也有很多可以轻松阅读的小品。遗憾的是现在已经停止更新了，但文章很多够看一阵了。</p>
+<li><p><a href="http://www.gamesetwatch.com/column_at_play/" target="_blank" rel="external">@Play</a><br>GameSetWatch 上的一个关于 Roguelike 的专栏，作者对它讲的东西那是相当懂，有很多游戏的超深度分析，也有很多可以轻松阅读的小品。遗憾的是现在已经停止更新了，但文章很多够看一阵了。</p>
 </li>
-<li><p><a href="http://www.roguelikeradio.com/ \" target="_blank" rel="external">Roguelike Radio</a><br>可能是唯一一个关于 Roguelike 的 Podcast。但是质量实在是高的飞起。这里有几乎所有著名 Roguelike 游戏作者的采访。我记得有一期采访了一些在大学里研究游戏的博士和教授谈了谈他们工作的内容，感觉非常有意思。</p>
+<li><p><a href="http://www.roguelikeradio.com/" target="_blank" rel="external">Roguelike Radio</a><br>可能是唯一一个关于 Roguelike 的 Podcast。但是质量实在是高的飞起。这里有几乎所有著名 Roguelike 游戏作者的采访。我记得有一期采访了一些在大学里研究游戏的博士和教授谈了谈他们工作的内容，感觉非常有意思。</p>
 </li>
-<li><p><a href="http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page \" target="_blank" rel="external">RogueBasin</a><br>虽然看上去是一个 Roguelike 开发技术的维基，但其实这边可能是最全的 Roguelike 游戏数据库，绝大部分的游戏这边都有页面简单介绍。如果你对开发也感兴趣的话这边有很好的教程</p>
+<li><p><a href="http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page" target="_blank" rel="external">RogueBasin</a><br>虽然看上去是一个 Roguelike 开发技术的维基，但其实这边可能是最全的 Roguelike 游戏数据库，绝大部分的游戏这边都有页面简单介绍。如果你对开发也感兴趣的话这边有很好的教程</p>
 </li>
-<li><p><a href="http://www.reddit.com/r/roguelikes \" target="_blank" rel="external">reddit.com/r/roguelikes</a><br>Reddit 上一个流量不大的 Roguelike 社区，感觉非常和谐友爱。大部分内容就是新的 Roguelike 相关游戏，第一次胜利的报告，还有 DCSS 和 Brogue 的每周挑战。</p>
+<li><p><a href="http://www.reddit.com/r/roguelikes" target="_blank" rel="external">reddit.com/r/roguelikes</a><br>Reddit 上一个流量不大的 Roguelike 社区，感觉非常和谐友爱。大部分内容就是新的 Roguelike 相关游戏，第一次胜利的报告，还有 DCSS 和 Brogue 的每周挑战。</p>
 </li>
 </ul>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>这篇超长的文章到这里就结束了。正如最开始提到的，越来越多新开发的游戏在从 Roguelike 里借鉴各种元素，以后 Roguelike 这个词毫无疑问的也会更多的出现。希望能看到这里的你能对 Roguelike 相关的东西有一个比较准确的理解。其实文中有些阐述比较武断，但你知道的游戏的东西太严肃了也没什么意思，其实还是如果能找个 Roguelike 游戏来玩一下，感受一下这个神奇的游戏类型最重要了。</p>
@@ -475,11 +475,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">语言</a>
+                <a href="javascript:void(0)" class="js-tag color3">底层</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,15 +499,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">底层</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">语言</a>
               </li>
             
             <div class="clearfix"></div>
